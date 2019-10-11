@@ -1,0 +1,99 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.pls-select{
+    padding: 10px;
+}
+
+.select-service{
+    display: flex;
+}
+
+.service-item:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.service-item{
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+/*  cropiing stuff */
+
+img{
+    max-width: 100%
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.cropper-area{
+
+}
+
+.view-cropper-img{
+    display: flex;
+}
+
+
+.default-img{
+    border: 1px solid grey;
+    border-radius: 4px;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    background: hsl(240, 92%, 66%);
+    color: white;
+    margin: 30px;
+}
+
+.crop-img{
+    border: 1px solid rgb(255, 133, 117);
+    border-radius: 4px;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    background: rgb(255, 133, 117);
+    color: white;
+    margin: 30px;
+}
+
+.choose-img{
+    border-radius: 4px;
+    height: 40px;
+    font-size: 15px;
+    color: white;
+    width: 100px;
+    margin: 30px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none
+}
+
+.cropped-img{
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+
+
+/* spell check stuff */
+
+.file-content{
+    margin: 10px;
+    display: flex;
+}
