@@ -39,5 +39,15 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script type="text/javascript">
+      (function() {
+          var script = document.createElement('script'); 
+              script.type = 'text/javascript'; 
+              script.async = true;
+          script.src = '/example.php?arg1=1&arg2=2';
+          var s = document.getElementsByTagName('script')[0]; 
+              s.parentNode.insertBefore(script, s);
+      })();
+  </script>
   </body>
 </html>

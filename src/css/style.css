@@ -1,0 +1,69 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.spell-container{
+    display: flex;
+    flex-direction: column;
+}
+.row1{
+    display: flex;
+}
+
+.spell-inputs{
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.data-error{
+    padding: 20px;
+    border-radius: 6px;
+    margin: 20px;
+    flex: 1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.or{
+    margin: 20px 0px;
+    color: grey;
+}
+
+.textarea-spell-cont{
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea-spell{
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 4px;
+    padding: 10px;
+    width: 400px;
+    height: 100px;
+}
+
+.spellcheck-btn{
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 4px;
+    height: 40px;
+    font-size: 15px;
+    padding: 10px;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.recent-searches{
+    margin: 20px;
+}
+
+.refresh{
+    color: blue;;
+}
+
+.refresh:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

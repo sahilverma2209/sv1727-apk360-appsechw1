@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'cropperjs/dist/cropper.css';
-import './style.css';
+import '../css/style.css';
 
 import Cropper from 'react-cropper';
 
@@ -9,7 +9,7 @@ class MyCropper extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        src: require('./default.jpg'),
+        src: require('../default.jpg'),
         cropResult: null,
       };
   
@@ -43,11 +43,11 @@ class MyCropper extends Component {
   
     render() {
       return (
-        <div className="container">
+        <div className="crop-container">
   
           <div className="cropper-area">
             <input className="choose-img" type="file" onChange={this.onChange} />
-            <button className="default-img" onClick={() => this.setState({ src: require('./default.jpg') })}>Use default img</button>
+            <button className="default-img" onClick={() => this.setState({ src: require('../default.jpg') })}>Use default img</button>
             <button className="crop-img" onClick={this.cropImage}> Crop Image </button>
               <Cropper
                 style={{ height: 400, width: '100%' }}

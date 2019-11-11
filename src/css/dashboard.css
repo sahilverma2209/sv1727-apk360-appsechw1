@@ -1,6 +1,14 @@
-.main-container{
+.dashboard-container{
     display: flex;
+    height: 100vh;
     flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+
+.active{
+    color: red;
+    border-bottom: 1px solid grey;
 }
 
 .pls-select{
@@ -9,11 +17,31 @@
 
 .select-service{
     display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.left{
+    flex:1;
+    display: flex;
+}
+
+.right{
+    flex:1;
+    display: flex;
+    padding: 10px;
+    justify-content: flex-end;
+    color: blue;
+}
+
+.right:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .service-item:hover{
     cursor: pointer;
-    text-decoration: underline;
+    background: rgba(128, 128, 128, 0.212);
 }
 
 .service-item{
@@ -28,16 +56,13 @@ img{
     max-width: 100%
 }
 
-.container{
+.crop-container{
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
 
-.cropper-area{
-
-}
 
 .view-cropper-img{
     display: flex;
@@ -94,6 +119,6 @@ button:focus{
 /* spell check stuff */
 
 .file-content{
-    margin: 10px;
+    /* margin: 10px; */
     display: flex;
 }
