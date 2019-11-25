@@ -18,6 +18,11 @@ class Dashboard extends React.Component {
         if(loggedIn !== 'true') window.location.replace('/')
     }
 
+    logout(){
+        localStorage.removeItem('authToken')
+        window.location.replace('/')
+    }
+
     render(){
         
         return(
@@ -29,7 +34,7 @@ class Dashboard extends React.Component {
                         <div className={`service-item ${this.state.selectedService === 'crop' ? 'active' : ''}`} onClick={()=>this.setState({selectedService: 'crop'})}>Crop Image</div>
                         <div className={`service-item ${this.state.selectedService === 'spell' ? 'active' : ''}`} onClick={()=>this.setState({selectedService: 'spell'})}>Spell Check</div>
                     </div>
-                    <div className="right" onClick={() => window.location.replace('/')}>Logout</div>
+                    <div className="right" onClick={this.logout}>Logout</div>
                 </div>
                 
 

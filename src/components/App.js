@@ -7,14 +7,6 @@ import Dashboard from './Dashboard';
 import Landing from './Landing';
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-
-    
-  }
-
-  
-
   render() {
     return (
       <div className="main-container">

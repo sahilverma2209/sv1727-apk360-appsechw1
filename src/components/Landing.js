@@ -17,6 +17,7 @@ class Landing extends React.Component {
     }
 
     componentDidMount(){
+        // localStorage.clear()
         localStorage.setItem('loggedIn', 'false')
         localStorage.removeItem('user')
     }
@@ -29,12 +30,13 @@ class Landing extends React.Component {
 
             const request = await axios.post('https://cors-anywhere.herokuapp.com/https://sv1727-apk360-spellcheck.herokuapp.com/login', { 
                 "email": this.state.loginEmail,
-                "pass": this.state.loginPass
+                "password": this.state.loginPass
             });
             console.log(request)
             if(request.data.success){
                 this.setState({loggingIn: false})
                 localStorage.setItem('loggedIn', 'true')
+                localStorage.setItem('authToken', request.data.token)
                 localStorage.setItem('user', this.state.loginEmail)
                 window.location.replace('/dashboard')
             } else {
@@ -52,13 +54,14 @@ class Landing extends React.Component {
             this.setState({signingUp: true})
             const request = await axios.post('https://cors-anywhere.herokuapp.com/https://sv1727-apk360-spellcheck.herokuapp.com/signup', { 
                 "email": this.state.signupEmail,
-                "pass": this.state.signupPass
+                "password": this.state.signupPass
             });
-
+            
             console.log(request)
             if(request.data.success){
                 this.setState({ signingUp: false})
                 localStorage.setItem('loggedIn', 'true')
+                localStorage.setItem('authToken', request.data.token)
                 localStorage.setItem('user', this.state.signupEmail)
                 window.location.replace('/dashboard')
             } else {
